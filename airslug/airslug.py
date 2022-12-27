@@ -4,12 +4,14 @@ import random
 SCREEN_WIDTH = 800
 SCREEN_HEIGHT = 600
 
+# TODO: vision is to build platform shooter including start menu, score, end screen (win/lose) with restart
+
 class Player(pygame.sprite.Sprite):
     def __init__(self):
         super(Player, self).__init__()
         # TODO: make plane helices animated. gif?
         # TODO: remove white spaces to make collision more accurate
-        self.surf = pygame.image.load("airforce/assets/sprite/plane.png").convert()
+        self.surf = pygame.image.load("airslug/assets/sprite/plane.png").convert()
         self.surf.set_colorkey((0, 0, 0), pygame.RLEACCEL)
         self.rect = self.surf.get_rect()
 
@@ -39,7 +41,7 @@ class Player(pygame.sprite.Sprite):
 class Enemy(pygame.sprite.Sprite):
     def __init__(self):
         super(Enemy, self).__init__()
-        self.surf = pygame.image.load("airforce/assets/sprite/missile.png").convert()
+        self.surf = pygame.image.load("airslug/assets/sprite/missile.png").convert()
         self.surf.set_colorkey((255, 255, 255), pygame.RLEACCEL)
         # the starting position is randomly generated, as is the speed
         self.rect = self.surf.get_rect(
@@ -60,7 +62,7 @@ class Enemy(pygame.sprite.Sprite):
 class Cloud(pygame.sprite.Sprite):
     def __init__(self):
         super(Cloud, self).__init__()
-        self.surf = pygame.image.load("airforce/assets/sprite/cloud.png").convert()
+        self.surf = pygame.image.load("airslug/assets/sprite/cloud.png").convert()
         self.surf.set_colorkey((0, 0, 0), pygame.RLEACCEL)
         #the starting position is randomly generated
         self.rect = self.surf.get_rect(
@@ -109,14 +111,14 @@ all_sprites.add(player)
 # load and play our background music
 # sound source: http://ccmixter.org/files/Apoxode/59262
 # license: https://creativecommons.org/licenses/by/3.0/
-pygame.mixer.music.load("airforce/assets/sfx/Apoxode_-_Electric_1.mp3")
+pygame.mixer.music.load("airslug/assets/sfx/Apoxode_-_Electric_1.mp3")
 pygame.mixer.music.play(loops=-1)
 
 # load all our sound files
 # sound sources: Jon Fincher
-move_up_sound = pygame.mixer.Sound("airforce/assets/sfx/Rising_putter.ogg")
-move_down_sound = pygame.mixer.Sound("airforce/assets/sfx/Falling_putter.ogg")
-collision_sound = pygame.mixer.Sound("airforce/assets/sfx/Collision.ogg")
+move_up_sound = pygame.mixer.Sound("airslug/assets/sfx/Rising_putter.ogg")
+move_down_sound = pygame.mixer.Sound("airslug/assets/sfx/Falling_putter.ogg")
+collision_sound = pygame.mixer.Sound("airslug/assets/sfx/Collision.ogg")
 
 # set the base volume for all sounds
 move_up_sound.set_volume(0.5)
