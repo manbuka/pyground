@@ -1,3 +1,5 @@
-######  🎮 pyground - a pygame playground
+##  🎮 pyground
+######  This is a pygame playground. Let's play.
 
-* [airforce](airforce/airforce.py)
+* [airslug](airforce/airforce.py): platform shooter
+* uluwatu (soon): 2d rpg
