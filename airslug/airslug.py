@@ -4,7 +4,7 @@ import random
 SCREEN_WIDTH = 800
 SCREEN_HEIGHT = 600
 
-# TODO: vision is to build platform shooter including start menu, score, end screen (win/lose) with restart
+# TODO: vision is to build air run and gun including start menu, score, end screen (win/lose) with restart
 
 class Player(pygame.sprite.Sprite):
     def __init__(self):
